@@ -1,0 +1,1943 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+  height: 70px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.navbar nav a:hover {
+  color: #2563eb;
+}
+
+/* Hero */
+
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #eff6ff, #f8fafc);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 30px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 25px 0 20px;
+  font-size: 58px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero-text {
+  max-width: 680px;
+  margin: auto;
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 26px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-button:hover {
+  background: #1d4ed8;
+}
+
+/* Analyzer */
+
+.analyzer-section {
+  padding: 90px 20px;
+  background: white;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-label {
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+.section-heading p:last-child {
+  color: #64748b;
+}
+
+.analyzer-card {
+  max-width: 1100px;
+  margin: auto;
+  padding: 35px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.upload-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 11px 20px;
+  background: #2563eb;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  grid-column: 1 / -1;
+}
+
+.upload-box input {
+  display: none;
+}
+
+.file-name {
+  margin-top: 20px;
+}
+
+.job-description {
+  margin-top: 30px;
+}
+
+.job-description label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.job-description textarea {
+  flex: 1;
+  width: 100%;
+  min-height: 230px;
+  padding: 15px;
+  resize: vertical;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.job-description textarea:focus {
+  border-color: #2563eb;
+}
+
+.character-count {
+  text-align: right;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.analyze-button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.analyze-button:hover {
+  background: #1d4ed8;
+}
+
+/* Features */
+
+.features-section {
+  padding: 90px 20px;
+  background: #f8fafc;
+}
+
+.features {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  padding: 30px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.feature-icon {
+  font-size: 35px;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Footer */
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar nav {
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .analyzer-card {
+    padding: 20px;
+  }
+}
+/* Error */
+
+.error-message {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+
+/* Disabled Analyze Button */
+
+.analyze-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* Results */
+
+.results {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.results h2 {
+  margin-bottom: 8px;
+}
+
+.success-message {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.result-box h3 {
+  margin-top: 0;
+}
+
+.result-box pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+  padding: 15px;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+/* Results Section */
+
+.results {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+  padding-top: 30px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.results h2 {
+  margin-bottom: 8px;
+}
+
+/* Result Category Headings */
+
+.result-category {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.result-category h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* Matched Skills - Green */
+
+.matched-skills h3 {
+  color: #16a34a;
+}
+
+/* Missing Skills - Red */
+
+.missing-skills h3 {
+  color: #dc2626;
+}
+
+/* Recommendations - Yellow */
+
+.recommendations h3 {
+  color: #ca8a04;
+}
+/* =========================================
+   ATS RESULTS DASHBOARD
+========================================= */
+
+.results {
+  grid-column: 1 / -1;
+  margin-top: 45px;
+  padding-top: 40px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.results-header h2 {
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.results-header p:last-child {
+  color: #64748b;
+}
+
+
+/* Overall Score */
+
+.score-card {
+  max-width: 850px;
+  margin: auto;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  min-width: 150px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-circle span {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.score-circle small {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.score-details h3 {
+  font-size: 23px;
+  margin-top: 0;
+}
+
+.score-details p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+
+/* Score Breakdown */
+
+.score-grid {
+  max-width: 1000px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.score-item {
+  padding: 20px 15px;
+  text-align: center;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.score-item span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.score-item strong {
+  font-size: 22px;
+}
+
+
+/* Skills Grid */
+
+.skills-grid {
+  max-width: 1000px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+/* Result Category */
+
+.result-category {
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.result-category h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+
+/* Green Matched Skills */
+
+.matched-skills {
+  border-top: 4px solid #16a34a;
+}
+
+.matched-skills h3 {
+  color: #16a34a;
+}
+
+
+/* Red Missing Skills */
+
+.missing-skills {
+  border-top: 4px solid #dc2626;
+}
+
+.missing-skills h3 {
+  color: #dc2626;
+}
+
+
+/* Skill Tags */
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* Green Tags */
+
+.matched-tag {
+  background: #dcfce7;
+  color: #166534;
+}
+
+
+/* Red Tags */
+
+.missing-tag {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+
+/* Yellow Recommendations */
+
+.recommendations {
+  max-width: 1000px;
+  margin: 30px auto;
+  border-top: 4px solid #eab308;
+  background: #fffbeb;
+}
+
+.recommendations h3 {
+  color: #a16207;
+}
+
+.recommendation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recommendation-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px;
+  background: #fef3c7;
+  border-radius: 8px;
+}
+
+.recommendation-item span {
+  color: #ca8a04;
+  font-weight: bold;
+}
+
+.recommendation-item p {
+  margin: 0;
+  color: #713f12;
+}
+
+
+/* Relevant Projects */
+
+.projects-section {
+  max-width: 1000px;
+  margin: 40px auto 0;
+}
+
+.projects-section > h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  padding: 22px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.project-card h4 {
+  margin-top: 0;
+  line-height: 1.4;
+}
+
+.project-card p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.project-score {
+  margin: 15px 0;
+  color: #475569;
+}
+
+.project-score strong {
+  margin-left: 5px;
+  color: #2563eb;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+  .score-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .score-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .score-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================================
+   RESUME + JOB DESCRIPTION LAYOUT
+   ========================================= */
+
+.analyzer-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+
+/* Resume Upload Box */
+
+.upload-box {
+  min-height: 300px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8fafc;
+  border: 2px dashed #94a3b8;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+
+/* Job Description Box */
+
+.job-description {
+  min-height: 300px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f8fafc;
+  border: 2px solid #94a3b8;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+
+/* Job Description Textarea */
+
+.job-description textarea {
+  width: 100%;
+  min-height: 220px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  resize: vertical;
+  outline: none;
+}
+
+
+.job-description textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* Upload Button */
+
+.upload-button {
+  display: inline-block;
+
+  padding: 12px 22px;
+
+  background: #2563eb;
+  color: white;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+
+/* Hide actual file input */
+
+#resume-upload {
+  display: none;
+}
+
+
+/* Selected file */
+
+.file-name {
+  margin-top: 15px;
+  color: #475569;
+  text-align: center;
+}
+
+
+/* Analyze Button */
+
+.analyze-button {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  padding: 15px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.analyze-button:hover {
+  background: #1d4ed8;
+}
+
+
+.analyze-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .analyzer-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .upload-box,
+  .job-description {
+    min-height: 300px;
+  }
+
+  .analyze-button {
+    grid-column: auto;
+  }
+
+}
+/* =========================================
+   STEP 1 - RESUME UPLOAD UI
+   ========================================= */
+
+.upload-icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.upload-box h3 {
+  margin: 5px 0 10px;
+  font-size: 24px;
+}
+
+.upload-box p {
+  margin: 5px 0 18px;
+  color: #64748b;
+}
+
+.upload-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.upload-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.file-name {
+  margin-top: 18px !important;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1e40af !important;
+  font-size: 14px;
+}
+/* =========================================
+   STEP 2 - JOB DESCRIPTION UI
+   ========================================= */
+
+.job-description {
+  min-height: 300px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f8fafc;
+  border: 2px solid #94a3b8;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+.job-description label {
+  margin-bottom: 15px;
+
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.job-description textarea {
+  flex: 1;
+
+  width: 100%;
+  min-height: 220px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+
+  resize: vertical;
+  outline: none;
+}
+
+.job-description textarea::placeholder {
+  color: #94a3b8;
+}
+
+.job-description textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.character-count {
+  margin: 8px 0 0;
+
+  text-align: right;
+
+  color: #64748b;
+  font-size: 13px;
+}
+/* =========================================
+   STEP 3 - ANALYZE BUTTON
+   ========================================= */
+
+.analyze-button {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  min-height: 58px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Hover */
+
+.analyze-button:hover:not(:disabled) {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+/* Click */
+
+.analyze-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+
+/* Loading / Disabled */
+
+.analyze-button:disabled {
+  background: #93c5fd;
+
+  cursor: not-allowed;
+
+  transform: none;
+  box-shadow: none;
+}
+/* =========================================
+   STEP 4 - RESUME UPLOAD AREA
+   ========================================= */
+
+.upload-box {
+  position: relative;
+
+  min-height: 300px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background: #f8fafc;
+
+  border: 2px dashed #94a3b8;
+  border-radius: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Hover effect */
+
+.upload-box:hover {
+  border-color: #2563eb;
+  background: #f8fbff;
+}
+
+
+/* Upload icon */
+
+.upload-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  background: #dbeafe;
+  border-radius: 50%;
+
+  font-size: 36px;
+}
+
+
+/* Heading */
+
+.upload-box h3 {
+  margin: 5px 0 8px;
+
+  font-size: 23px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+
+/* Description */
+
+.upload-box p {
+  margin: 5px 0 18px;
+
+  color: #64748b;
+  font-size: 15px;
+}
+
+
+/* Choose Resume button */
+
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.upload-button:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2);
+}
+
+
+/* Hide browser file input */
+
+#resume-upload {
+  display: none;
+}
+
+
+/* Selected file */
+
+.file-name {
+  margin-top: 18px !important;
+  margin-bottom: 0 !important;
+
+  padding: 9px 14px;
+
+  background: #eff6ff;
+
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+
+  color: #1e40af !important;
+
+  font-size: 14px !important;
+}
+/* =========================================
+   STEP 5 - JD ACTION BUTTONS
+   ========================================= */
+
+.jd-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.sample-jd-button,
+.clear-jd-button {
+  padding: 9px 14px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.sample-jd-button {
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.sample-jd-button:hover {
+  background: #dbeafe;
+}
+
+.clear-jd-button {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+}
+
+.clear-jd-button:hover:not(:disabled) {
+  background: #f1f5f9;
+}
+
+.clear-jd-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/* =========================================
+   STEP 6 - RESULTS DASHBOARD
+   OVERALL MATCH SCORE
+   ========================================= */
+
+.results {
+  grid-column: 1 / -1;
+
+  margin-top: 45px;
+  padding-top: 40px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.results-header h2 {
+  margin: 8px 0;
+
+  font-size: 32px;
+  color: #0f172a;
+}
+
+.results-header p:last-child {
+  color: #64748b;
+}
+
+
+/* Overall score card */
+
+.score-card {
+  max-width: 850px;
+  margin: 0 auto;
+
+  padding: 30px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+
+  box-sizing: border-box;
+}
+
+
+/* Score circle */
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+
+  min-width: 150px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.score-circle span {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.score-circle small {
+  margin-top: 3px;
+
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+
+/* Score information */
+
+.score-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-size: 24px;
+
+  color: #0f172a;
+}
+
+.score-details p {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.6;
+}
+
+.score-details strong {
+  color: #2563eb;
+}
+/* =========================================
+   STEP 7 - SCORE BREAKDOWN
+   ========================================= */
+
+.score-grid {
+  max-width: 1000px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 15px;
+}
+
+.score-item {
+  padding: 20px 15px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.score-item:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.score-item span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.score-item strong {
+  display: block;
+
+  font-size: 23px;
+
+  color: #2563eb;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .score-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .score-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================
+   STEP 8 - MATCHED & MISSING SKILLS
+   ========================================= */
+
+.skills-grid {
+  max-width: 1000px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* Common skill card */
+
+.result-category {
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+.result-category h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 21px;
+}
+
+
+/* Matched Skills */
+
+.matched-skills {
+  border-top: 4px solid #16a34a;
+}
+
+.matched-skills h3 {
+  color: #16a34a;
+}
+
+
+/* Missing Skills */
+
+.missing-skills {
+  border-top: 4px solid #dc2626;
+}
+
+.missing-skills h3 {
+  color: #dc2626;
+}
+
+
+/* Skill tags */
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.skill-tag {
+  display: inline-block;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* Green matched tags */
+
+.matched-tag {
+  background: #dcfce7;
+  color: #166534;
+
+  border: 1px solid #bbf7d0;
+}
+
+
+/* Red missing tags */
+
+.missing-tag {
+  background: #fee2e2;
+  color: #991b1b;
+
+  border: 1px solid #fecaca;
+}
+
+
+/* Hover */
+
+.skill-tag {
+  transition: transform 0.15s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================
+   STEP 9 - RECOMMENDATIONS
+   ========================================= */
+
+.recommendations {
+  max-width: 1000px;
+  margin: 30px auto;
+
+  padding: 25px;
+
+  background: #fffbeb;
+
+  border: 1px solid #fde68a;
+  border-top: 4px solid #eab308;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+.recommendations h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: #a16207;
+
+  font-size: 21px;
+}
+
+.recommendation-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.recommendation-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 13px 15px;
+
+  background: #fef3c7;
+
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+}
+
+.recommendation-item span {
+  flex-shrink: 0;
+
+  color: #ca8a04;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.recommendation-item p {
+  margin: 0;
+
+  color: #713f12;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* =========================================
+   STEP 10 - RELEVANT PROJECTS
+   ========================================= */
+
+.projects-section {
+  max-width: 1000px;
+  margin: 40px auto 0;
+}
+
+.projects-section > h3 {
+  margin-bottom: 20px;
+
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+/* Project card */
+
+.project-card {
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Hover */
+
+.project-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+
+/* Project title */
+
+.project-card h4 {
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  font-size: 17px;
+  line-height: 1.4;
+
+  color: #0f172a;
+}
+
+
+/* Project information */
+
+.project-card p {
+  margin: 8px 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* Main relevance score */
+
+.project-score {
+  padding: 10px 12px;
+
+  margin: 0 0 15px;
+
+  background: #eff6ff;
+
+  border-radius: 8px;
+
+  color: #475569;
+
+  font-size: 14px;
+}
+
+.project-score strong {
+  margin-left: 5px;
+
+  color: #2563eb;
+
+  font-size: 17px;
+}
+
+
+/* Project skill tags */
+
+.project-card .skill-list {
+  margin-top: 15px;
+}
+
+.project-card .skill-tag {
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================
+   STEP 11 - MATCH SUMMARY
+   ========================================= */
+
+.match-summary {
+  margin-top: 25px;
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  box-sizing: border-box;
+}
+
+.match-summary h4 {
+  margin: 0 0 10px;
+
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.match-summary > p {
+  margin: 0 0 18px;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.match-summary > p strong {
+  color: #2563eb;
+}
+
+.summary-row {
+  margin-top: 15px;
+}
+
+.summary-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #475569;
+}
+
+.summary-skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.summary-tag {
+  padding: 6px 10px;
+
+  border-radius: 15px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.matched-summary-tag {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.missing-summary-tag {
+  background: #fee2e2;
+  color: #991b1b;
+}
+/* =========================================
+   ANALYZE ANOTHER RESUME
+   ========================================= */
+
+.reset-analysis {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 35px;
+  padding-top: 25px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.reset-button {
+  padding: 12px 24px;
+
+  background: #ffffff;
+  color: #2563eb;
+
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.reset-button:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+/* =========================================
+   STEP 13 - LOADING SPINNER
+   ========================================= */
+
+.analyze-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.loading-spinner {
+  width: 18px;
+  height: 18px;
+
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top: 3px solid #ffffff;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* =========================================
+   STEP 16 - MATCH INTERPRETATION
+   ========================================= */
+
+.match-interpretation {
+  margin-top: 18px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.match-interpretation strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #1e40af;
+  font-size: 15px;
+}
+
+.match-interpretation span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+/* =========================================
+   STEP 18 - SCORE PROGRESS BAR
+   ========================================= */
+
+.score-bar {
+  width: 100%;
+  height: 7px;
+  margin-top: 12px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.score-bar-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+.score-bar-fill.good {
+  background: #16a34a;
+}
+
+.score-bar-fill.average {
+  background: #f59e0b;
+}
+
+.score-bar-fill.low {
+  background: #dc2626;
+}
+.score-circle.good {
+  border-color: #16a34a;
+}
+
+.score-circle.average {
+  border-color: #f59e0b;
+}
+
+.score-circle.low {
+  border-color: #dc2626;
+}
+.match-level {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.match-level.good {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.match-level.average {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.match-level.low {
+  background: #fee2e2;
+  color: #991b1b;
+}

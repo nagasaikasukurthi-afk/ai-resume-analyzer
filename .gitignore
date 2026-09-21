@@ -16,11 +16,17 @@ backend/venv/
 # Jupyter
 .ipynb_checkpoints/
 
+
 # Uploaded/private resumes
 backend/uploads/
+backend/app/uploads/
 
 # Python cache
 *.egg-info/
+
+# Frontend dependencies/build
+frontend/node_modules/
+frontend/dist/
 
 # IDE
 .vscode/

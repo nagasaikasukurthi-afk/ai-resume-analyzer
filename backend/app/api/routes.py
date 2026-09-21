@@ -1,15 +1,20 @@
-from fastapi import APIRouter, UploadFile, File, HTTPException
+import os
+import shutil
+
+from fastapi import APIRouter, UploadFile, File, HTTPException, Form
 from app.services.resume_parser import extract_resume_text
 from app.services.hybrid_analyzer import analyze_resume_hybrid
 from app.services.job_matcher import match_resume_to_job
 
-import os
-import shutil
+
 
 
 router = APIRouter(prefix="/resume", tags=["Resume"])
 
-UPLOAD_DIR = "uploads"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+UPLOAD_DIR = os.path.join(BASE_DIR, "uploads")
+print("UPLOAD_DIR:", UPLOAD_DIR)
 
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
@@ -85,7 +90,7 @@ async def analyze_uploaded_resume(file: UploadFile = File(...)):
 @router.post("/match")
 async def match_resume(
     file: UploadFile = File(...),
-    job_description: str = ""
+    job_description: str = Form(...)
 ):
 
     allowed_extensions = [".pdf", ".docx"]
